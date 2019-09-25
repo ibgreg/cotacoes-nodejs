@@ -23,7 +23,7 @@ cotacoesForm.addEventListener('submit', (event) => {
         response.json().then((data) => {
             if(data.error) {
                 mainMessage.innerText = `Alguma coisa deu errado!`;
-                price.innerText = `${data.error.message} | Código: ${data.error.message}`
+                price.innerText = `${data.error.message} | Código: ${data.error.code}`
             } else {
                 mainMessage.innerText = data.symbol;
                 price.innerText = `PRICE: ${data.price}`;
